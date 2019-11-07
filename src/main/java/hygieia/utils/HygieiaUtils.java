@@ -86,8 +86,8 @@ public class HygieiaUtils {
 
         temp = rootDirectory.list();
         if (!CollectionUtils.isEmpty(temp)) {
-            listener.getLogger().println("Current Path: "+ currentItem);
             for (FilePath currentItem : rootDirectory.list()) {
+                listener.getLogger().println("Current Path: "+ currentItem);
                 if (currentItem.isDirectory()) {
                     getArtifactFiles(currentItem, pattern, results);
                 }
